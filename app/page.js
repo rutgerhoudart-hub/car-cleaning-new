@@ -6,6 +6,8 @@ export default function Home() {
   const slides = [
     { before: "/before1.jpg", after: "/after1.jpg" },
     { before: "/before2.jpg", after: "/after2.jpg" },
+    { before: "/before3.jpg", after: "/after3.jpg" },
+    { before: "/before4.jpg", after: "/after4.jpg" },
   ];
 
   const [slide, setSlide] = useState(0);
@@ -15,7 +17,7 @@ export default function Home() {
 
       {/* HEADER */}
       <header className="flex justify-between items-center px-6 py-5 bg-[#0b2e59]">
-        <img src="/logo-rutger.svg" className="h-16" />
+        <img src="logo-rutger.svg" className="h-16" />
 
         <a href="https://wa.me/32498350160">
           <button className="bg-[#5c9ea6] px-6 py-3 rounded-full text-xl">
