@@ -111,30 +111,95 @@ export default function Home() {
       </section>
 
       {/* PREMIUM WASBEURT */}
-      <section className="bg-white text-black py-16 px-6">
-        <h2 className="text-4xl text-center font-bold mb-10">
-          Premium wasbeurt
-        </h2>
+<section className="bg-white text-black py-20 px-6">
+  <h2 className="text-4xl text-center font-bold mb-12">
+    Premium wasbeurt
+  </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-          <div className="bg-[#f5f5f5] p-8 rounded-3xl">
-            <h3 className="font-bold">Premium handwas</h3>
-            <p className="text-3xl font-bold my-4">€95</p>
-          </div>
+    {/* 1 */}
+    <div className="bg-[#f5f5f5] p-8 rounded-3xl">
+      <h3 className="text-xl font-bold mb-2">Premium handwas</h3>
 
-          <div className="bg-[#f5f5f5] p-8 rounded-3xl border-2 border-black">
-            <h3 className="font-bold">Premium + interieur</h3>
-            <p className="text-3xl font-bold my-4">€175</p>
-          </div>
+      <p className="text-3xl font-bold mb-6">
+        €95 <span className="text-sm font-normal">/ Grote wagen +€15</span>
+      </p>
 
-          <div className="bg-[#f5f5f5] p-8 rounded-3xl">
-            <h3 className="font-bold">Decontaminatie</h3>
-            <p className="text-3xl font-bold my-4">€125</p>
-          </div>
+      <ul className="space-y-2 text-sm">
+        <li>Krasvrije wasbeurt (2 emmer methode)</li>
+        <li>Reinigen deurstijlen en instaplijsten</li>
+        <li>Reinigen velgen, banden en wielkasten</li>
+        <li>Drogen met warme lucht en zachte microvezel</li>
+        <li>Spraywax of sealant</li>
+        <li>Bandendressing</li>
+      </ul>
 
-        </div>
-      </section>
+      <p className="text-sm mt-6">
+        Kan gecombineerd worden met een basis interieurreiniging
+        of een <span className="text-blue-500">interieur dieptereiniging</span>.
+      </p>
+    </div>
+
+    {/* 2 */}
+    <div className="bg-[#f5f5f5] p-8 rounded-3xl border-2 border-black relative">
+      <div className="absolute top-0 left-0 right-0 bg-black text-white text-center text-xs py-2 rounded-t-3xl">
+        MEEST POPULAIR
+      </div>
+
+      <h3 className="text-xl font-bold mb-2 mt-6">
+        Premium handwas + basis interieur
+      </h3>
+
+      <p className="text-3xl font-bold mb-6">
+        €175 <span className="text-sm font-normal">/ Grote wagen +€25</span>
+      </p>
+
+      <ul className="space-y-2 text-sm">
+        <li>Krasvrije wasbeurt (2 emmer methode)</li>
+        <li>Reinigen deurstijlen en instaplijsten</li>
+        <li>Reinigen velgen, banden en wielkasten</li>
+        <li>Drogen met warme lucht en zachte microvezel</li>
+        <li>Spraywax of sealant</li>
+        <li>Bandendressing</li>
+        <li>Interieur stofzuigen</li>
+        <li>Interieur afstoffen</li>
+        <li>Reinigen ramen en spiegels</li>
+      </ul>
+
+      <p className="text-sm mt-6">
+        Enkel mogelijk indien de wagen zich in relatief goede staat bevindt.
+        Voor een grondige reiniging adviseren wij onze{" "}
+        <span className="text-blue-500">interieur dieptereiniging</span>.
+      </p>
+    </div>
+
+    {/* 3 */}
+    <div className="bg-[#f5f5f5] p-8 rounded-3xl">
+      <h3 className="text-xl font-bold mb-2">Decontaminatie handwas</h3>
+
+      <p className="text-3xl font-bold mb-6">
+        €125 <span className="text-sm font-normal">/ Grote wagen +€25</span>
+      </p>
+
+      <ul className="space-y-2 text-sm">
+        <li>Krasvrije wasbeurt (2 emmer methode)</li>
+        <li>Reinigen deurstijlen en instaplijsten</li>
+        <li>Reinigen velgen, banden en wielkasten</li>
+        <li>Teer en vliegroest verwijderen</li>
+        <li>Kleibehandeling*</li>
+        <li>Drogen met warme lucht en zachte microvezel</li>
+        <li>Spraywax of sealant</li>
+        <li>Bandendressing</li>
+      </ul>
+
+      <p className="text-sm mt-6 italic">
+        *enkel indien toepasbaar of vereist.
+      </p>
+    </div>
+
+  </div>
+</section>
 
       {/* COATING */}
       <section className="bg-[#0b2e59] text-white py-16 px-6">
