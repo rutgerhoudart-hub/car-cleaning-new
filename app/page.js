@@ -1,86 +1,79 @@
 "use client";
 
-import { useState } from "react";
-
 export default function Home() {
-  const slides = [
-    { before: "/before1.jpg", after: "/after1.jpg" },
-    { before: "/before2.jpg", after: "/after2.jpg" },
-    { before: "/before3.jpg", after: "/after3.jpg" },
-    { before: "/before4.jpg", after: "/after4.jpg" },
-  ];
-
-  const [slide, setSlide] = useState(0);
-
   return (
     <div className="bg-[#0b2e59] text-white">
 
-      {/* HEADER */}
-      <header className="flex justify-between items-center px-6 py-6">
-        <img src="/logo.svg" className="h-16 md:h-20" />
+      {/* NAVBAR */}
+      <header className="flex justify-between items-center px-6 py-4 bg-[#0b2e59] sticky top-0 z-50 border-b border-white/10">
+        
+        {/* LOGO LINKS */}
+        <img
+          src="/logo.png"
+          className="h-16 md:h-20 object-contain"
+          alt="logo"
+        />
 
-        <a href="https://wa.me/32498350160">
-          <button className="bg-[#5c9ea6] px-6 py-3 rounded-full text-lg">
-            WhatsApp
-          </button>
-        </a>
+        {/* CTA RECHTS */}
+        <div className="flex gap-4">
+          <a href="#contact">
+            <button className="bg-white text-black px-5 py-2 rounded-full font-bold">
+              Offerte
+            </button>
+          </a>
+
+          <a href="https://wa.me/32498350160">
+            <button className="bg-[#25D366] px-5 py-2 rounded-full font-bold">
+              WhatsApp
+            </button>
+          </a>
+        </div>
       </header>
 
       {/* HERO */}
-      <section className="text-center py-24">
-        <h1 className="text-6xl md:text-8xl font-bold">
+      <section className="text-center py-20 px-6">
+        <h1 className="text-5xl md:text-7xl font-bold">
           Premium Car Detailing
         </h1>
-
-        <p className="text-2xl mt-4">
-          Binnen & buiten schoonmaak
+        <p className="text-xl md:text-2xl mt-4">
+          Binnen & buiten schoonmaak op topniveau
         </p>
       </section>
 
-      {/* VOOR NA */}
-      <section className="text-center py-16">
-        <h2 className="text-4xl mb-8">Voor & Na</h2>
+      {/* VOOR & NA */}
+      <section className="text-center py-20">
+        <h2 className="text-4xl font-bold mb-10">Voor & Na</h2>
 
-        <div className="flex justify-center gap-6">
-          <img src={slides[slide].before} className="w-64 h-48 object-cover" />
-          <img src={slides[slide].after} className="w-64 h-48 object-cover" />
-        </div>
-
-        <button
-          onClick={() => setSlide((slide + 1) % slides.length)}
-          className="mt-6"
-        >
-          Volgende
-        </button>
+        {[1, 2, 3, 4].map((i) => (
+          <div key={i} className="flex flex-col md:flex-row justify-center gap-6 mb-8 px-6">
+            <img src={`/before${i}.jpg`} className="w-full md:w-[420px] h-[250px] object-cover rounded-2xl"/>
+            <img src={`/after${i}.jpg`} className="w-full md:w-[420px] h-[250px] object-cover rounded-2xl"/>
+          </div>
+        ))}
       </section>
 
-      {/* PREMIUM WASBEURT */}
+      {/* ================= PREMIUM WASBEURT ================= */}
       <section className="bg-white text-black py-20 px-6">
         <h2 className="text-4xl text-center mb-12">Premium wasbeurt</h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
           <div className="bg-gray-100 p-8 rounded-2xl">
-            <h3 className="text-xl font-bold">Premium handwas</h3>
-            <p className="text-3xl font-bold my-4">€95</p>
-
+            <h3 className="font-bold text-xl">Premium handwas</h3>
+            <p className="text-3xl font-bold my-4">€95 / Grote wagen +€15</p>
             <ul className="text-sm space-y-2">
               <li>Krasvrije wasbeurt (2 emmer methode)</li>
               <li>Reinigen deurstijlen en instaplijsten</li>
               <li>Reinigen velgen, banden en wielkasten</li>
-              <li>Drogen met warme lucht</li>
+              <li>Drogen met warme lucht en zachte microvezel</li>
               <li>Spraywax of sealant</li>
               <li>Bandendressing</li>
             </ul>
           </div>
 
           <div className="bg-gray-100 p-8 rounded-2xl border-2 border-black">
-            <h3 className="text-xl font-bold">
-              Premium handwas + basis interieur
-            </h3>
-
-            <p className="text-3xl font-bold my-4">€175</p>
-
+            <h3 className="font-bold text-xl">Premium handwas + basis interieur</h3>
+            <p className="text-3xl font-bold my-4">€175 / Grote wagen +€25</p>
             <ul className="text-sm space-y-2">
               <li>Krasvrije wasbeurt</li>
               <li>Velgen + banden reinigen</li>
@@ -91,12 +84,8 @@ export default function Home() {
           </div>
 
           <div className="bg-gray-100 p-8 rounded-2xl">
-            <h3 className="text-xl font-bold">
-              Decontaminatie handwas
-            </h3>
-
-            <p className="text-3xl font-bold my-4">€125</p>
-
+            <h3 className="font-bold text-xl">Decontaminatie handwas</h3>
+            <p className="text-3xl font-bold my-4">€125 / Grote wagen +€25</p>
             <ul className="text-sm space-y-2">
               <li>Teer en vliegroest verwijderen</li>
               <li>Kleibehandeling</li>
@@ -107,18 +96,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INTERIEUR */}
+      {/* ================= INTERIEUR ================= */}
       <section className="bg-[#f5f5f5] text-black py-20 px-6">
-        <h2 className="text-4xl text-center mb-12">
-          Interieur reiniging
-        </h2>
+        <h2 className="text-4xl text-center mb-12">Interieur reiniging</h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
           <div className="bg-white p-8 rounded-2xl">
             <h3 className="text-xl font-bold">Dieptereiniging interieur</h3>
-            <p className="text-3xl font-bold my-4">€295</p>
-
+            <p className="text-3xl font-bold my-4">€295 incl. BTW</p>
             <ul className="text-sm space-y-2">
               <li>Dashboard reinigen</li>
               <li>Lederen zetels reinigen</li>
@@ -131,7 +117,6 @@ export default function Home() {
           <div className="bg-white p-8 rounded-2xl">
             <h3 className="text-xl font-bold">Reiniging dakhemel</h3>
             <p className="text-3xl font-bold my-4">€75</p>
-
             <ul className="text-sm space-y-2">
               <li>Vlekken verwijderen</li>
               <li>Prijs afhankelijk van vervuiling</li>
@@ -141,7 +126,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* POLIJSTEN */}
+      {/* ================= POLIJSTEN ================= */}
       <section className="bg-white text-black py-20 px-6">
         <h2 className="text-4xl text-center mb-12">Polijsten</h2>
 
@@ -150,17 +135,16 @@ export default function Home() {
           <div className="bg-gray-100 p-8 rounded-2xl">
             <h3 className="text-xl font-bold">Light polish</h3>
             <p className="text-3xl font-bold my-4">€595</p>
-
             <ul className="text-sm space-y-2">
               <li>1-staps polieren</li>
               <li>Lichte krassen verwijderen</li>
+              <li>Optimale glans</li>
             </ul>
           </div>
 
           <div className="bg-gray-100 p-8 rounded-2xl">
             <h3 className="text-xl font-bold">Heavy polish</h3>
             <p className="text-3xl font-bold my-4">€895</p>
-
             <ul className="text-sm space-y-2">
               <li>Meertraps polieren</li>
               <li>Diepe krassen verwijderen</li>
@@ -170,26 +154,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COATING */}
+      {/* ================= COATING ================= */}
       <section className="bg-[#f5f5f5] text-black py-20 px-6">
         <h2 className="text-4xl text-center mb-12">Coating</h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
           <div className="bg-white p-8 rounded-2xl">
-            <h3 className="font-bold">New Car Coating</h3>
+            <h3>New Car Coating</h3>
             <p className="text-3xl font-bold my-4">€995</p>
-
             <ul className="text-sm">
-              <li>Reiniging + inspectie</li>
-              <li>Aanbrengen 2 lagen nanolex</li>
+              <li>Grondige reiniging</li>
+              <li>Aanbrengen 2 lagen Nanolex</li>
             </ul>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl border-2 border-black">
-            <h3 className="font-bold">Coating Pakket</h3>
+          <div className="bg-white p-8 rounded-2xl">
+            <h3>Coating Pakket</h3>
             <p className="text-3xl font-bold my-4">€1395</p>
-
             <ul className="text-sm">
               <li>Meertraps polieren</li>
               <li>Nanolex coating</li>
@@ -197,15 +179,29 @@ export default function Home() {
           </div>
 
           <div className="bg-white p-8 rounded-2xl">
-            <h3 className="font-bold">Matte Coating</h3>
+            <h3>Matte Coating</h3>
             <p className="text-3xl font-bold my-4">€995</p>
-
-            <ul className="text-sm">
-              <li>Matte lak bescherming</li>
-            </ul>
           </div>
 
         </div>
+      </section>
+
+      {/* ================= CONTACT ================= */}
+      <section id="contact" className="bg-white text-black py-20 px-6">
+        <h2 className="text-4xl text-center mb-10">Vraag offerte aan</h2>
+
+        <form
+          action="https://formsubmit.co/jouwemail@gmail.com"
+          method="POST"
+          className="max-w-xl mx-auto grid gap-4"
+        >
+          <input type="text" name="naam" placeholder="Naam" className="p-4 rounded"/>
+          <input type="email" name="email" placeholder="Email" className="p-4 rounded"/>
+          <textarea name="bericht" placeholder="Wat wil je laten doen?" className="p-4 rounded"/>
+          <button className="bg-[#0b2e59] text-white py-3 rounded">
+            Verstuur
+          </button>
+        </form>
       </section>
 
     </div>
