@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Home() {
 const slides = [
-{ before: "/before.jpg", after: "/after.jpg" },
+{ before: "/before1.jpg", after: "/after1.jpg" },
 { before: "/before2.jpg", after: "/after2.jpg" },
 { before: "/before3.jpg", after: "/after3.jpg" },
 { before: "/before4.jpg", after: "/after4.jpg" },
@@ -17,7 +17,7 @@ return ( <div className="bg-[#0b2e59] text-white">
 ```
   {/* NAVBAR */}
   <header className="flex justify-between items-center px-6 py-4">
-    <img src="/logo-rutger.svg.png" className="h-20 object-contain" />
+    <img src="/logo.png" className="h-20 object-contain" />
 
     <div className="flex gap-4">
       <a href="#contact">
