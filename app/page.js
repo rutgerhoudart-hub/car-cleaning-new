@@ -1,81 +1,52 @@
-"use client";
-
-import { useState } from "react";
-
 export default function Home() {
-  const slides = [
-    { before: "/before1.jpg", after: "/after1.jpg" },
-    { before: "/before2.jpg", after: "/after2.jpg" },
-    { before: "/before3.jpg", after: "/after3.jpg" },
-    { before: "/before4.jpg", after: "/after4.jpg" },
-  ];
-
-  const [slide, setSlide] = useState(0);
-
-  const openCalendly = () => {
-    window.open("https://calendly.com/rutgerscarcleaning", "_blank");
-  };
-
   return (
-    <div className="bg-[#0b2e59] text-white">
+    <main className="font-sans">
 
       {/* NAVBAR */}
-      <header className="flex justify-between items-center p-6">
-        <img src="/logo.png" className="h-16 object-contain" />
-
-        <div className="flex gap-4">
-          <button onClick={openCalendly} className="bg-white text-black px-6 py-3 rounded-full font-bold">
-            Boek afspraak
-          </button>
-
-          <a href="https://wa.me/32498350160">
-            <button className="bg-[#25D366] px-6 py-3 rounded-full font-bold">
-              WhatsApp
-            </button>
-          </a>
+      <div className="flex justify-between items-center p-4 bg-black text-white">
+        <img src="/logo.png" className="h-12 object-contain" />
+        <div className="flex gap-3">
+          <a href="#offerte" className="bg-white text-black px-4 py-2 rounded-full">Offerte</a>
+          <a href="https://wa.me/324XXXXXXXX" className="bg-green-500 px-4 py-2 rounded-full">WhatsApp</a>
         </div>
-      </header>
+      </div>
 
       {/* HERO */}
-      <section className="text-center py-24">
-        <h1 className="text-6xl font-bold">Premium Car Detailing</h1>
-        <p className="text-2xl mt-4">
-          Binnen & buiten schoonmaak op topniveau
-        </p>
-
-        <button onClick={openCalendly} className="mt-8 bg-[#5c9ea6] px-10 py-4 rounded-full text-xl font-bold">
-          Boek nu
-        </button>
+      <section className="bg-blue-900 text-white text-center py-20">
+        <h1 className="text-5xl font-bold">Premium Car Detailing</h1>
+        <p className="mt-4">Binnen & buiten schoonmaak op topniveau</p>
       </section>
 
       {/* VOOR & NA */}
-      <section className="text-center py-20">
-        <h2 className="text-4xl mb-10">Voor & Na Resultaten</h2>
+      <section className="py-20 text-center">
+        <h2 className="text-3xl mb-10">Voor & Na</h2>
 
-        <div className="flex justify-center gap-6 flex-wrap">
-          <img src={slides[slide].before} className="w-[320px] h-[300px] object-cover rounded-xl" />
-          <img src={slides[slide].after} className="w-[320px] h-[300px] object-cover rounded-xl" />
-        </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <img src="/before1.jpg" />
+          <img src="/after1.jpg" />
 
-        <div className="mt-6 flex justify-center gap-4">
-          <button onClick={() => setSlide((slide - 1 + 4) % 4)}>Vorige</button>
-          <button onClick={() => setSlide((slide + 1) % 4)}>Volgende</button>
+          <img src="/before2.jpg" />
+          <img src="/after2.jpg" />
+
+          <img src="/before3.jpg" />
+          <img src="/after3.jpg" />
+
+          <img src="/before4.jpg" />
+          <img src="/after4.jpg" />
         </div>
       </section>
 
-      {/* DIENSTEN */}
-      <section className="bg-white text-black py-20 px-6">
+      {/* PREMIUM WASBEURT */}
+      <section className="bg-gray-100 py-20">
+        <h2 className="text-3xl text-center mb-10">Premium wasbeurt</h2>
 
-        {/* PREMIUM WAS */}
-        <h2 className="text-4xl mb-10 text-center">Premium wasbeurt</h2>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Premium handwas</h3>
             <p className="text-3xl font-bold">€95 / Grote wagen +€15</p>
 
-            <ul className="mt-4 text-sm space-y-2">
+            <ul className="text-sm mt-4 space-y-1">
               <li>Krasvrije wasbeurt (2 emmer methode)</li>
               <li>Reinigen deurstijlen en instaplijsten</li>
               <li>Reinigen velgen, banden en wielkasten</li>
@@ -84,21 +55,16 @@ export default function Home() {
               <li>Bandendressing</li>
             </ul>
 
-            <p className="mt-4 text-sm">
-              Kan gecombineerd worden met een basis interieurreiniging
-              of een interieur dieptereiniging.
+            <p className="text-sm mt-4">
+              Kan gecombineerd worden met een basis interieurreiniging of interieur dieptereiniging.
             </p>
           </div>
 
-          <div className="p-8 bg-gray-100 rounded-xl border-2 border-black">
-            <p className="text-xs font-bold mb-2 text-center">
-              MEEST POPULAIR
-            </p>
-
+          <div className="bg-white p-6 rounded-xl border-2 border-black">
             <h3>Premium handwas + basis interieur</h3>
             <p className="text-3xl font-bold">€175 / Grote wagen +€25</p>
 
-            <ul className="mt-4 text-sm space-y-2">
+            <ul className="text-sm mt-4 space-y-1">
               <li>Krasvrije wasbeurt (2 emmer methode)</li>
               <li>Reinigen deurstijlen en instaplijsten</li>
               <li>Reinigen velgen, banden en wielkasten</li>
@@ -107,19 +73,18 @@ export default function Home() {
               <li>Bandendressing</li>
               <li>Interieur stofzuigen</li>
               <li>Interieur afstoffen</li>
-              <li>Ramen reinigen</li>
+              <li>Reinigen ramen en spiegels</li>
             </ul>
-
-            <p className="mt-4 text-sm">
-              Enkel mogelijk indien de wagen zich in goede staat bevindt.
-            </p>
           </div>
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Decontaminatie handwas</h3>
             <p className="text-3xl font-bold">€125 / Grote wagen +€25</p>
 
-            <ul className="mt-4 text-sm space-y-2">
+            <ul className="text-sm mt-4 space-y-1">
+              <li>Krasvrije wasbeurt (2 emmer methode)</li>
+              <li>Reinigen deurstijlen en instaplijsten</li>
+              <li>Reinigen velgen, banden en wielkasten</li>
               <li>Teer en vliegroest verwijderen</li>
               <li>Kleibehandeling</li>
               <li>Drogen met warme lucht</li>
@@ -129,108 +94,136 @@ export default function Home() {
           </div>
 
         </div>
+      </section>
 
-        {/* INTERIEUR */}
-        <h2 className="text-4xl mb-10 text-center">Interieur reiniging</h2>
+      {/* INTERIEUR */}
+      <section className="py-20">
+        <h2 className="text-3xl text-center mb-10">Interieur reiniging</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Dieptereiniging interieur</h3>
-            <p className="text-4xl font-bold">€295</p>
+            <p className="text-3xl font-bold">€295</p>
 
-            <ul className="mt-4 text-sm space-y-2">
+            <ul className="text-sm mt-4 space-y-1">
               <li>Dashboard, middenconsole en deurpanelen reinigen</li>
               <li>Lederen zetels reinigen en voeden</li>
               <li>Stoffen zetels reinigen</li>
-              <li>Tapijt reinigen</li>
+              <li>Automatten en tapijt reinigen</li>
               <li>Kunststof behandelen</li>
-              <li>Ramen streeploos schoonmaken</li>
+              <li>Ramen streeploos reinigen</li>
             </ul>
 
-            <p className="mt-4 text-sm">Gemiddelde duur: 1 dag</p>
+            <p className="text-sm mt-4">Gemiddelde duur: 1 dag</p>
           </div>
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Reiniging dakhemel</h3>
-            <p className="text-4xl font-bold">€75</p>
+            <p className="text-3xl font-bold">€75</p>
 
-            <ul className="mt-4 text-sm space-y-2">
-              <li>Vlekken verwijderen</li>
+            <ul className="text-sm mt-4 space-y-1">
+              <li>Vlekken verwijderen met specifieke producten</li>
               <li>Prijs afhankelijk van vervuiling</li>
             </ul>
           </div>
 
         </div>
+      </section>
 
-        {/* POLIJSTEN */}
-        <h2 className="text-4xl mb-10 text-center">Polijsten</h2>
+      {/* POLIJSTEN */}
+      <section className="bg-gray-100 py-20">
+        <h2 className="text-3xl text-center mb-10">Polijsten</h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Light polish</h3>
-            <p className="text-4xl font-bold">€595</p>
+            <p className="text-3xl font-bold">€595</p>
+
+            <ul className="text-sm mt-4 space-y-1">
+              <li>1-staps polieren</li>
+              <li>Lichte krassen verwijderen</li>
+              <li>Optimale glans</li>
+            </ul>
           </div>
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Heavy polish</h3>
-            <p className="text-4xl font-bold">€895</p>
+            <p className="text-3xl font-bold">€895</p>
+
+            <ul className="text-sm mt-4 space-y-1">
+              <li>Meertraps polieren</li>
+              <li>Diepe krassen verwijderen</li>
+              <li>Oxidatie verwijderen</li>
+            </ul>
           </div>
 
         </div>
+      </section>
 
-        {/* COATING */}
-        <h2 className="text-4xl mb-10 text-center">Auto coating prijzen</h2>
+      {/* COATING */}
+      <section className="py-20">
+        <h2 className="text-3xl text-center mb-10">Auto coating prijzen</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>New Car Coating</h3>
-            <p className="text-4xl font-bold">€995</p>
-            <p className="mt-2 text-sm">2 lagen Nanolex coating</p>
+            <p className="text-3xl font-bold">€995</p>
+            <ul className="text-sm mt-4">
+              <li>Grondige reiniging</li>
+              <li>Inspectie lak</li>
+              <li>2 lagen Nanolex coating</li>
+            </ul>
           </div>
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Coating pakket</h3>
-            <p className="text-4xl font-bold">€1395</p>
+            <p className="text-3xl font-bold">€1395</p>
+            <ul className="text-sm mt-4">
+              <li>Meertraps polieren</li>
+              <li>2 lagen Nanolex coating</li>
+            </ul>
           </div>
 
-          <div className="p-8 bg-gray-100 rounded-xl">
+          <div className="bg-white p-6 rounded-xl">
             <h3>Matte coating</h3>
-            <p className="text-4xl font-bold">€995</p>
+            <p className="text-3xl font-bold">€995</p>
+            <ul className="text-sm mt-4">
+              <li>Matte bescherming</li>
+              <li>Nanolex coating</li>
+            </ul>
           </div>
 
         </div>
-
       </section>
 
-      {/* CTA */}
-      <section className="text-center py-20">
-        <button onClick={openCalendly} className="bg-[#5c9ea6] px-10 py-5 rounded-full text-xl font-bold">
-          Boek je afspraak
-        </button>
+      {/* BOOKING */}
+      <section className="py-20 text-center">
+        <h2 className="text-3xl mb-6">Boek een afspraak</h2>
+
+        <iframe
+          src="https://calendly.com/rutgerscarcleaning"
+          className="w-full h-[600px]"
+        ></iframe>
       </section>
 
-      {/* FORM */}
-      <section className="bg-[#c9c1ad] text-black py-20 px-6">
-        <h2 className="text-4xl text-center mb-10">Offerte aanvragen</h2>
+      {/* OFFERTE */}
+      <section id="offerte" className="bg-gray-100 py-20 text-center">
+        <h2 className="text-3xl mb-6">Offerte aanvragen</h2>
 
-        <form
-          action="https://formsubmit.co/rutgerscarcleaning@outlook.be"
-          method="POST"
-          className="max-w-xl mx-auto flex flex-col gap-4"
-        >
-          <input name="naam" placeholder="Naam" className="p-4" required />
-          <input name="email" placeholder="Email" className="p-4" required />
-          <textarea name="bericht" placeholder="Bericht" className="p-4" />
+        <form action="https://formsubmit.co/rutgerscarcleaning@gmail.com" method="POST" className="max-w-md mx-auto flex flex-col gap-4">
+          <input type="text" name="naam" placeholder="Naam" className="p-3 border" required />
+          <input type="email" name="email" placeholder="Email" className="p-3 border" required />
+          <textarea name="bericht" placeholder="Bericht" className="p-3 border"></textarea>
 
-          <button className="bg-black text-white py-4">
-            Verstuur aanvraag
+          <button className="bg-black text-white py-3 rounded-full">
+            Verstuur
           </button>
         </form>
       </section>
 
-    </div>
+    </main>
   );
 }
