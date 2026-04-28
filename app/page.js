@@ -7,7 +7,7 @@ export default function Home() {
         <img src="/logo.png" className="h-12 object-contain" />
         <div className="flex gap-3">
           <a href="#offerte" className="bg-white text-black px-4 py-2 rounded-full">Offerte</a>
-          <a href="https://wa.me/324XXXXXXXX" className="bg-green-500 px-4 py-2 rounded-full">WhatsApp</a>
+          <a href="https://wa.me/32498350160" className="bg-green-500 px-4 py-2 rounded-full">WhatsApp</a>
         </div>
       </div>
 
