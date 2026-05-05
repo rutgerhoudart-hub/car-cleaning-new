@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="font-sans bg-[#0b0b0b] text-white">
+    <main className="font-sans bg-[#F5F7FA] text-black">
 
       {/* NAVBAR */}
-      <header className="fixed top-0 w-full z-50 backdrop-blur bg-black/70 border-b border-white/10">
+      <header className="fixed top-0 w-full z-50 bg-white shadow">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
           <img src="/logo.png" className="h-12" />
 
           <div className="flex gap-4">
-            <a href="#contact" className="px-5 py-2 rounded-full border border-white/20 hover:bg-white hover:text-black transition">
+            <a href="#contact" className="px-5 py-2 rounded-full bg-[#16385B] text-white">
               Offerte
             </a>
-            <a href="https://wa.me/32498350160" className="px-5 py-2 rounded-full bg-green-500 hover:scale-105 transition">
+            <a href="https://wa.me/32498350160" className="px-5 py-2 rounded-full bg-green-500 text-white">
               WhatsApp
             </a>
           </div>
@@ -21,9 +21,9 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-      <section className="h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+      <section className="h-screen flex flex-col justify-center items-center text-center px-6 pt-20 bg-[#16385B] text-white">
         <h1 className="text-6xl font-bold mb-6">Premium Car Detailing</h1>
-        <p className="opacity-70 max-w-xl">
+        <p className="opacity-80 max-w-xl">
           Binnen & buiten detailing op het hoogste niveau. Jouw wagen opnieuw als nieuw.
         </p>
       </section>
@@ -43,12 +43,12 @@ export default function Home() {
       </section>
 
       {/* PREMIUM WASBEURT */}
-      <section className="py-24 bg-[#111] text-center">
+      <section className="py-24 bg-white text-center">
         <h2 className="text-4xl font-bold mb-12">Premium wasbeurt</h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-[#F5F7FA] p-8 rounded-2xl shadow text-left">
             <h3 className="text-xl">Premium handwas</h3>
             <p className="text-3xl font-bold my-4">€95 / +€15</p>
             <ul className="space-y-2 text-sm">
@@ -61,8 +61,8 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="bg-white/10 p-8 rounded-2xl border border-white text-left">
-            <p className="text-xs mb-2 text-center">MEEST POPULAIR</p>
+          <div className="bg-white p-8 rounded-2xl shadow border-2 border-[#16385B] text-left">
+            <p className="text-xs mb-2 text-center font-bold text-[#16385B]">MEEST POPULAIR</p>
             <h3 className="text-xl">Premium + interieur</h3>
             <p className="text-3xl font-bold my-4">€175 / +€25</p>
             <ul className="space-y-2 text-sm">
@@ -73,7 +73,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-[#F5F7FA] p-8 rounded-2xl shadow text-left">
             <h3 className="text-xl">Decontaminatie</h3>
             <p className="text-3xl font-bold my-4">€125</p>
             <ul className="space-y-2 text-sm">
@@ -87,12 +87,12 @@ export default function Home() {
       </section>
 
       {/* INTERIEUR */}
-      <section className="py-24 text-center">
+      <section className="py-24 text-center bg-[#F5F7FA]">
         <h2 className="text-4xl font-bold mb-12">Interieur reiniging</h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6">
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-white p-8 rounded-2xl shadow text-left">
             <h3 className="text-xl">Dieptereiniging</h3>
             <p className="text-3xl font-bold my-4">€295</p>
             <ul className="space-y-2 text-sm">
@@ -103,7 +103,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-white p-8 rounded-2xl shadow text-left">
             <h3 className="text-xl">Dakhemel</h3>
             <p className="text-3xl font-bold my-4">€75</p>
           </div>
@@ -112,12 +112,12 @@ export default function Home() {
       </section>
 
       {/* POLIJSTEN */}
-      <section className="py-24 bg-[#111] text-center">
+      <section className="py-24 bg-white text-center">
         <h2 className="text-4xl font-bold mb-12">Polijsten</h2>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6">
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-[#F5F7FA] p-8 rounded-2xl shadow text-left">
             <h3>Light polish</h3>
             <p className="text-3xl font-bold my-4">€595</p>
             <ul className="text-sm">
@@ -126,7 +126,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-[#F5F7FA] p-8 rounded-2xl shadow text-left">
             <h3>Heavy polish</h3>
             <p className="text-3xl font-bold my-4">€895</p>
             <ul className="text-sm">
@@ -139,24 +139,24 @@ export default function Home() {
       </section>
 
       {/* COATING */}
-      <section className="py-24 text-center">
+      <section className="py-24 text-center bg-[#F5F7FA]">
         <h2 className="text-4xl font-bold mb-12">Coating</h2>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-white p-8 rounded-2xl shadow text-left">
             <h3>New Car</h3>
             <p className="text-3xl font-bold my-4">€995</p>
             <p className="text-sm">2 lagen Nanolex coating</p>
           </div>
 
-          <div className="bg-white/10 p-8 rounded-2xl border border-white text-left">
+          <div className="bg-white p-8 rounded-2xl shadow border-2 border-[#16385B] text-left">
             <h3>Coating pakket</h3>
             <p className="text-3xl font-bold my-4">€1395</p>
             <p className="text-sm">Polijsten + Nanolex coating</p>
           </div>
 
-          <div className="bg-white/5 p-8 rounded-2xl border border-white/10 text-left">
+          <div className="bg-white p-8 rounded-2xl shadow text-left">
             <h3>Matte coating</h3>
             <p className="text-3xl font-bold my-4">€995</p>
           </div>
@@ -169,15 +169,15 @@ export default function Home() {
         <h2 className="text-4xl font-bold mb-10">Contact</h2>
 
         <form
-          action="https://formsubmit.co/rutgerscarcleaning@outlook.be"
+          action="https://formsubmit.co/rutgerscarcleaning@outlook.com"
           method="POST"
           className="max-w-2xl mx-auto grid gap-6"
         >
-          <input type="text" name="naam" placeholder="Naam" required className="p-4 bg-white/10 rounded-xl"/>
-          <input type="email" name="email" placeholder="Email" required className="p-4 bg-white/10 rounded-xl"/>
-          <textarea name="bericht" placeholder="Bericht" className="p-4 bg-white/10 rounded-xl"/>
+          <input type="text" name="naam" placeholder="Naam" required className="p-4 bg-gray-200 rounded-xl"/>
+          <input type="email" name="email" placeholder="Email" required className="p-4 bg-gray-200 rounded-xl"/>
+          <textarea name="bericht" placeholder="Bericht" className="p-4 bg-gray-200 rounded-xl"/>
 
-          <button className="bg-white text-black py-4 rounded-xl font-bold hover:scale-105 transition">
+          <button className="bg-[#16385B] text-white py-4 rounded-xl font-bold">
             Verstuur aanvraag
           </button>
         </form>
