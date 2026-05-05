@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -73,20 +74,12 @@ export default function Home() {
             <p className="text-3xl font-bold my-4">€175 / Grote wagen +€25</p>
 
             <ul className="space-y-2 text-sm">
-              <li>Krasvrije wasbeurt (2 emmer methode)</li>
-              <li>Reinigen deurstijlen en instaplijsten</li>
-              <li>Reinigen velgen, banden en wielkasten</li>
-              <li>Drogen met warme lucht en zachte microvezel</li>
-              <li>Spraywax of sealant</li>
-              <li>Bandendressing</li>
+              <li>Krasvrije wasbeurt</li>
+              <li>Velgen + banden reinigen</li>
               <li>Interieur stofzuigen</li>
-              <li>Interieur afstoffen</li>
-              <li>Reinigen ramen en spiegels</li>
+              <li>Dashboard reinigen</li>
+              <li>Ramen reinigen</li>
             </ul>
-
-            <p className="text-sm mt-6">
-              Enkel mogelijk indien de wagen zich in relatief goede staat bevindt.
-            </p>
           </div>
 
           <div className="bg-[#F5F7FA] p-8 rounded-2xl shadow text-left">
@@ -94,17 +87,10 @@ export default function Home() {
             <p className="text-3xl font-bold my-4">€125 / Grote wagen +€25</p>
 
             <ul className="space-y-2 text-sm">
-              <li>Krasvrije wasbeurt (2 emmer methode)</li>
-              <li>Reinigen deurstijlen en instaplijsten</li>
-              <li>Reinigen velgen, banden en wielkasten</li>
               <li>Teer en vliegroest verwijderen</li>
-              <li>Kleibehandeling*</li>
-              <li>Drogen met warme lucht en zachte microvezel</li>
-              <li>Spraywax of sealant</li>
-              <li>Bandendressing</li>
+              <li>Kleibehandeling</li>
+              <li>Bescherming lak</li>
             </ul>
-
-            <p className="text-xs mt-4">*enkel indien toepasbaar of vereist.</p>
           </div>
 
         </div>
@@ -121,114 +107,49 @@ export default function Home() {
             <p className="text-3xl font-bold my-4">€295 incl. BTW</p>
 
             <ul className="space-y-2 text-sm">
-              <li>Dashboard, middenconsole en deurpanelen reinigen</li>
-              <li>Lederen zetels reinigen en voeden</li>
-              <li>Stoffen zetels reinigen (shampoo-extractie)</li>
-              <li>Automatten en tapijt reinigen (shampoo-extractie)</li>
-              <li>Behandelen kunststof onderdelen (UV-bescherming)</li>
-              <li>Ramen streeploos schoonmaken</li>
+              <li>Zetels reinigen</li>
+              <li>Tapijten reinigen</li>
+              <li>Dashboard detailen</li>
+              <li>Ramen reinigen</li>
             </ul>
-
-            <p className="mt-6 text-sm">Gemiddelde duur: 1 dag</p>
           </div>
 
           <div className="bg-white p-8 rounded-2xl shadow text-left">
-            <h3 className="text-xl">Reiniging dakhemel</h3>
-            <p className="text-3xl font-bold my-4">€75 incl. BTW</p>
-
-            <ul className="space-y-2 text-sm">
-              <li>Vlekken verwijderen met aangepaste reinigingsmiddelen</li>
-              <li>Prijs afhankelijk van de vervuiling</li>
-            </ul>
+            <h3 className="text-xl">Dakhemel</h3>
+            <p className="text-3xl font-bold my-4">€75</p>
           </div>
 
         </div>
       </section>
 
-      {/* POLIJSTEN */}
-      <section className="py-24 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-12">Auto polieren prijzen</h2>
+      {/* BOOKING PRO */}
+      <section className="py-24 text-center">
+        <h2 className="text-4xl font-bold mb-6">Boek direct jouw afspraak</h2>
+        <p className="mb-6 text-gray-600">
+          Kies zelf een moment dat voor jou past. Wij werken flexibel.
+        </p>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6">
+        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="lazyOnload" />
 
-          <div className="bg-[#F5F7FA] p-8 rounded-2xl shadow text-left">
-            <h3>Light polish</h3>
-            <p className="text-3xl font-bold my-4">€595 incl. BTW</p>
-
-            <ul className="space-y-2 text-sm">
-              <li>1-staps polieren</li>
-              <li>Verwijderen van zeer lichte krasjes</li>
-              <li>Zorgt voor optimale glans</li>
-              <li>Aanbevolen voor wagens met zeer lichte gebruikssporen</li>
-            </ul>
-          </div>
-
-          <div className="bg-[#F5F7FA] p-8 rounded-2xl shadow text-left">
-            <h3>Heavy polish</h3>
-            <p className="text-3xl font-bold my-4">€895 incl. BTW</p>
-
-            <ul className="space-y-2 text-sm">
-              <li>Meerstaps polieren</li>
-              <li>Verwijderen van medium tot diepe krassen</li>
-              <li>Verwijderen van oxidatie en hologrammen</li>
-              <li>Zorgt voor optimale glans</li>
-            </ul>
-          </div>
-
-        </div>
-      </section>
-
-      {/* COATING */}
-      <section className="py-24 text-center bg-[#F5F7FA]">
-        <h2 className="text-4xl font-bold mb-12">Auto coating prijzen</h2>
-
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-
-          <div className="bg-white p-8 rounded-2xl shadow text-left">
-            <h3>New Car Coating</h3>
-            <p className="text-3xl font-bold my-4">€995 incl. BTW</p>
-
-            <ul className="space-y-2 text-sm">
-              <li>Grondige reiniging en veilige handwas</li>
-              <li>Chemische decontaminatie</li>
-              <li>Inspectie van lak</li>
-              <li>Aanbrengen 2 lagen nanolex coating</li>
-              <li>Infrarood uitharding</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow border-2 border-[#16385B] text-left">
-            <h3>Coating pakket</h3>
-            <p className="text-3xl font-bold my-4">€1395 incl. BTW</p>
-
-            <ul className="space-y-2 text-sm">
-              <li>Grondige reiniging</li>
-              <li>Kleibehandeling</li>
-              <li>Meerstaps polieren</li>
-              <li>Aanbrengen 2 lagen nanolex coating</li>
-              <li>Infrarood uitharding</li>
-            </ul>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow text-left">
-            <h3>Matte coating</h3>
-            <p className="text-3xl font-bold my-4">€995 incl. BTW</p>
-
-            <ul className="space-y-2 text-sm">
-              <li>Reiniging</li>
-              <li>2 lagen nanolex coating</li>
-              <li>Bescherming matte lak</li>
-            </ul>
-          </div>
-
-        </div>
+        <div
+          className="calendly-inline-widget rounded-2xl overflow-hidden shadow-xl"
+          data-url="https://calendly.com/rutgerscarcleaning"
+          style={{ minWidth: "320px", height: "700px" }}
+        />
       </section>
 
       {/* CONTACT */}
       <section id="contact" className="py-24 text-center px-6">
         <h2 className="text-4xl font-bold mb-10">Contact</h2>
 
-        <form action="https://formsubmit.co/rutgerscarcleaning@outlook.com" method="POST" className="max-w-2xl mx-auto grid gap-6">
+        <form
+          action="https://formsubmit.co/rutgerscarcleaning@outlook.com"
+          method="POST"
+          className="max-w-2xl mx-auto grid gap-6"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
           <input type="text" name="naam" placeholder="Naam" required className="p-4 bg-gray-200 rounded-xl"/>
           <input type="email" name="email" placeholder="Email" required className="p-4 bg-gray-200 rounded-xl"/>
           <textarea name="bericht" placeholder="Bericht" className="p-4 bg-gray-200 rounded-xl"/>
@@ -240,8 +161,6 @@ export default function Home() {
 
         <p className="mt-10">📞 0498350160</p>
         <p>✉️ rutgerscarcleaning@outlook.com</p>
-
-        <iframe src="https://calendly.com/rutgerscarcleaning" className="w-full h-[600px] mt-10" />
       </section>
 
     </main>
